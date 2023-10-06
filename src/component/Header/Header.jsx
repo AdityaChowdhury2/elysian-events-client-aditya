@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
-import Logo from '/logo.png';
 import { HiMenuAlt3 } from 'react-icons/hi';
+import Logo from '../Logo/Logo';
 
 const Header = () => {
 	const navLinks = (
@@ -8,9 +8,7 @@ const Header = () => {
 			<li>
 				<NavLink
 					to="/"
-					className={({ isActive }) => {
-						isActive ? 'font-bold' : '';
-					}}
+					className={({ isActive }) => (isActive ? 'text-primary-color' : '')}
 				>
 					Home
 				</NavLink>
@@ -18,9 +16,7 @@ const Header = () => {
 			<li>
 				<NavLink
 					to={'/blog'}
-					className={({ isActive }) => {
-						isActive ? 'font-bold' : '';
-					}}
+					className={({ isActive }) => (isActive ? 'text-primary-color ' : '')}
 				>
 					Blog
 				</NavLink>
@@ -28,9 +24,7 @@ const Header = () => {
 			<li>
 				<NavLink
 					to={'/about'}
-					className={({ isActive }) => {
-						isActive ? 'font-bold' : '';
-					}}
+					className={({ isActive }) => (isActive ? 'text-primary-color ' : '')}
 				>
 					About
 				</NavLink>
@@ -38,9 +32,7 @@ const Header = () => {
 			<li>
 				<NavLink
 					to={'/contact'}
-					className={({ isActive }) => {
-						isActive ? 'font-bold' : '';
-					}}
+					className={({ isActive }) => (isActive ? 'text-primary-color ' : '')}
 				>
 					Contact
 				</NavLink>
@@ -48,9 +40,7 @@ const Header = () => {
 			<li>
 				<NavLink
 					to={'/login'}
-					className={({ isActive }) => {
-						isActive ? 'font-bold' : '';
-					}}
+					className={({ isActive }) => (isActive ? 'text-primary-color ' : '')}
 				>
 					Login
 				</NavLink>
@@ -61,12 +51,12 @@ const Header = () => {
 		<>
 			<div className=" container navbar ">
 				<div className="navbar-start">
-					<img src={Logo} alt="" className="w-32" />
+					<Logo />
 				</div>
 
 				<div className="navbar-end ">
 					<div className="hidden lg:flex">
-						<ul className="menu menu-horizontal px-1">{navLinks}</ul>
+						<ul className="flex gap-6 px-1 ">{navLinks}</ul>
 					</div>
 					<div className="dropdown dropdown-end">
 						<label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -74,7 +64,7 @@ const Header = () => {
 						</label>
 						<ul
 							tabIndex={0}
-							className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+							className="flex flex-col dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 gap-2 hover:bg-base-100 focus:bg-base-100 active:bg-base-100"
 						>
 							{navLinks}
 						</ul>
