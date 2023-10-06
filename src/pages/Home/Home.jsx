@@ -1,4 +1,5 @@
 import { Helmet } from 'react-helmet-async';
+import Slider from '../../component/Slider/Slider';
 
 const Home = () => {
 	return (
@@ -6,6 +7,7 @@ const Home = () => {
 			<Helmet>
 				<title>Elysian Events | Home</title>
 			</Helmet>
+			<Slider />
 		</div>
 	);
 };

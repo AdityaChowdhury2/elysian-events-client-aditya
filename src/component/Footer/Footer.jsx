@@ -1,8 +1,10 @@
 import Logo from '../Logo/Logo';
-
+import AOS from 'aos'; // You can also use <link> for styles
+// ..
+AOS.init();
 const Footer = () => {
 	return (
-		<div className="bg-gray text-light">
+		<div className="bg-gray text-light " data-aos="fade-up">
 			<footer className="footer p-10 container">
 				<aside>
 					<Logo />
