@@ -2,8 +2,8 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 const ServiceCard = ({ event }) => {
-	const { id, name, image, price, short_description } = event || {};
-	console.log(id, name, image, price, short_description);
+	const { id, name, image, short_description } = event || {};
+
 	return (
 		<>
 			<div

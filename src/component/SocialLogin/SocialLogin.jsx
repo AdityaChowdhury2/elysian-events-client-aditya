@@ -1,13 +1,16 @@
 import { BsGoogle } from 'react-icons/bs';
 import useAuthData from '../../hooks/useAuthData';
 import { toast } from 'react-toastify';
+import { useNavigate } from 'react-router-dom';
 
 const SocialLogin = () => {
 	const { googleSignIn } = useAuthData();
+	const navigate = useNavigate();
 	const handleGoogleSignIn = () => {
 		googleSignIn()
 			.then(res => {
 				console.log(res.user);
+				navigate(location.state || '/');
 				toast.success('Login Successful');
 			})
 			.catch(err => {

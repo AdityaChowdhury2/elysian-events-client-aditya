@@ -3,10 +3,13 @@ import Slider from '../../component/Slider/Slider';
 
 import { useLoaderData } from 'react-router-dom';
 import ServiceCard from '../../component/ServiceCard/ServiceCard';
+import useAuthData from '../../hooks/useAuthData';
 
 const Home = () => {
 	const events = useLoaderData();
-	console.log(events);
+	const { user } = useAuthData();
+	// console.log(events);
+	console.log(user);
 	return (
 		<div>
 			<Helmet>

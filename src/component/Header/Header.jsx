@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { HiMenuAlt3 } from 'react-icons/hi';
 import Logo from '../Logo/Logo';
 import useAuthData from '../../hooks/useAuthData';
@@ -54,19 +54,21 @@ const Header = () => {
 						</label>
 						<ul
 							tabIndex={2}
-							className="mt-3 z-10 p-4 shadow flex flex-col gap-2 dropdown-content bg-base-100 rounded-box w-52"
+							className="mt-3 z-10 p-4 shadow flex flex-col gap-2 dropdown-content bg-base-100 rounded-box w-40"
 						>
 							<li>
-								<a className="justify-between">
+								<Link
+									to={`/profile/${user?.uid}`}
+									className="justify-between cursor-pointer"
+								>
 									Profile
 									<span className="badge">New</span>
+								</Link>
+							</li>
+							<li>
+								<a onClick={handleLogout} className="cursor-pointer">
+									Logout
 								</a>
-							</li>
-							<li>
-								<a>Settings</a>
-							</li>
-							<li>
-								<button onClick={handleLogout}>Logout</button>
 							</li>
 						</ul>
 					</div>

@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import RegistrationImage from './registration.svg';
 import SocialLogin from '../../component/SocialLogin/SocialLogin';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import useAuthData from '../../hooks/useAuthData';
 import { BsEye, BsEyeSlash } from 'react-icons/bs';
@@ -9,6 +9,7 @@ import { useState } from 'react';
 
 const Register = () => {
 	const { createUser } = useAuthData();
+	const navigate = useNavigate();
 	const [isEyesOpen, setIsEyesOpen] = useState(true);
 	const handleRegister = e => {
 		e.preventDefault();
@@ -29,6 +30,7 @@ const Register = () => {
 		}
 		createUser(userData)
 			.then(res => {
+				navigate(location.state || '/');
 				console.log(res.user);
 				toast.success('User created successfully');
 			})
