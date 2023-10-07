@@ -2,7 +2,7 @@ import BrandLogo from '/logo.png';
 const Logo = () => {
 	return (
 		<>
-			<img src={BrandLogo} alt="" className="w-32" />
+			<img src={BrandLogo} alt="" className="w-20 md:w-32" />
 		</>
 	);
 };

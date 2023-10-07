@@ -2,9 +2,35 @@ import { Helmet } from 'react-helmet-async';
 import LoginImage from './login.svg';
 
 import SocialLogin from '../../component/SocialLogin/SocialLogin';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import useAuthData from '../../hooks/useAuthData';
+import { toast } from 'react-toastify';
 
 const Login = () => {
+	const { signIn } = useAuthData();
+	const location = useLocation();
+	const navigate = useNavigate();
+	console.log(location);
+
+	const handleLogin = e => {
+		e.preventDefault();
+		const formData = new FormData(e.currentTarget);
+		const userData = {};
+		for (const data of formData.entries()) {
+			userData[data[0]] = data[1];
+		}
+		console.log(userData);
+		signIn(userData)
+			.then(res => {
+				navigate(location.state || '/');
+				console.log(res.user);
+			})
+			.catch(err => {
+				console.log(err.message);
+				toast.error('Could not match user Password and Email');
+			});
+	};
+
 	return (
 		<div>
 			<Helmet>
@@ -20,7 +46,7 @@ const Login = () => {
 						data-aos-easing="ease-in-out"
 						className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100"
 					>
-						<form className="card-body space-y-4">
+						<form onSubmit={handleLogin} className="card-body space-y-4">
 							<h4 className="text-center font-bold text-primary-color ">
 								Login
 							</h4>

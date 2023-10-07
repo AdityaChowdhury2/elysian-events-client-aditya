@@ -128,10 +128,10 @@
     ]
   },
   {
-    "id": 10,
+    "id": 9,
     "name": "Family Reunions",
     "image": "https://i.ibb.co/BVfWJq9/4bd97e731a.jpg",
-    "price_in_taka": 22000,
+    "price": 22000,
     "short_description": "Bringing families together to create lasting memories.",
     "long_description": "Our Family Reunion planning service is all about bringing generations together to create lasting memories. Whether it's a small gathering or a grand reunion, we handle everything from logistics to activities, so you can focus on reconnecting with loved ones.",
     "features": [

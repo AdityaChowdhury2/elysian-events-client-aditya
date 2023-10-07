@@ -18,6 +18,9 @@ export default {
       'gray-light': '#d3dce6',
     },
     extend: {
+      listStyleImage: {
+        checkMark: 'url("/checkmark.svg")',
+      },
       container: {
         center: true,
       },

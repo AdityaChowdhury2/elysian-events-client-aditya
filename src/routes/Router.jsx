@@ -7,6 +7,8 @@ import Contact from '../pages/Contact/Contact';
 import Login from '../pages/Login/Login';
 import Register from '../pages/Register/Register';
 import About from '../pages/About/About';
+import EventDetails from '../pages/EventDetails/EventDetails';
+import PrivateRoute from './PrivateRoute';
 
 const Router = createBrowserRouter([
 	{
@@ -38,6 +40,15 @@ const Router = createBrowserRouter([
 			{
 				path: '/register',
 				element: <Register />,
+			},
+			{
+				path: '/event/:eventId',
+				element: (
+					<PrivateRoute>
+						<EventDetails />
+					</PrivateRoute>
+				),
+				loader: () => fetch('/events.json'),
 			},
 		],
 	},

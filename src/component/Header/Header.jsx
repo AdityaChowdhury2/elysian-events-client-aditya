@@ -1,8 +1,15 @@
 import { NavLink } from 'react-router-dom';
 import { HiMenuAlt3 } from 'react-icons/hi';
 import Logo from '../Logo/Logo';
-
+import useAuthData from '../../hooks/useAuthData';
+import userProfile from '/user.svg';
 const Header = () => {
+	const { user, logOut } = useAuthData();
+	const handleLogout = () => {
+		logOut().then(() => {
+			console.log('user logged out');
+		});
+	};
 	const navLinks = (
 		<>
 			<li>
@@ -37,14 +44,45 @@ const Header = () => {
 					Contact
 				</NavLink>
 			</li>
-			<li>
-				<NavLink
-					to={'/login'}
-					className={({ isActive }) => (isActive ? 'text-primary-color ' : '')}
-				>
-					Login
-				</NavLink>
-			</li>
+			{user ? (
+				<>
+					<div className="dropdown dropdown-end">
+						<label tabIndex={2} className="btn btn-ghost btn-circle avatar">
+							<div className="w-10 rounded-full">
+								<img src={user?.photoURL || userProfile} />
+							</div>
+						</label>
+						<ul
+							tabIndex={2}
+							className="mt-3 z-10 p-4 shadow flex flex-col gap-2 dropdown-content bg-base-100 rounded-box w-52"
+						>
+							<li>
+								<a className="justify-between">
+									Profile
+									<span className="badge">New</span>
+								</a>
+							</li>
+							<li>
+								<a>Settings</a>
+							</li>
+							<li>
+								<button onClick={handleLogout}>Logout</button>
+							</li>
+						</ul>
+					</div>
+				</>
+			) : (
+				<li>
+					<NavLink
+						to={'/login'}
+						className={({ isActive }) =>
+							isActive ? 'text-primary-color ' : ''
+						}
+					>
+						Login
+					</NavLink>
+				</li>
+			)}
 		</>
 	);
 	return (
@@ -55,8 +93,8 @@ const Header = () => {
 				</div>
 
 				<div className="navbar-end ">
-					<div className="hidden lg:flex">
-						<ul className="flex gap-6 px-1 ">{navLinks}</ul>
+					<div className="hidden lg:flex ">
+						<ul className="flex gap-6 px-1 lg:items-center">{navLinks}</ul>
 					</div>
 					<div className="dropdown dropdown-end">
 						<label tabIndex={0} className="btn btn-ghost lg:hidden">

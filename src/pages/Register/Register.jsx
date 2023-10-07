@@ -17,7 +17,7 @@ const Register = () => {
 		for (const data of formData.entries()) {
 			userData[data[0]] = data[1];
 		}
-		const { email, name, password } = userData;
+		const { password } = userData;
 		if (password.length < 6) {
 			return toast.error('Password must be at least 6 characters');
 		}

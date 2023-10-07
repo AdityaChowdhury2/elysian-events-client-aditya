@@ -22,9 +22,11 @@ const ServiceCard = ({ event }) => {
 				<div className="card-body text-gray-dark">
 					<h2 className="card-title">{name}</h2>
 					<p className="">{short_description}</p>
-					<button className="w-full bg-primary-dark text-light px-5 rounded-md py-2">
-						<Link to={`/event/${id}`}>Book Now</Link>
-					</button>
+					<Link to={`/event/${id}`}>
+						<button className="w-full bg-primary-dark text-light px-5 rounded-md py-2">
+							View Details
+						</button>
+					</Link>
 				</div>
 			</div>
 		</>
