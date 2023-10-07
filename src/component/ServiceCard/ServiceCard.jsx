@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 const ServiceCard = ({ event }) => {
 	const { id, name, image, price, short_description } = event || {};
@@ -9,7 +10,7 @@ const ServiceCard = ({ event }) => {
 				data-aos="flip-left"
 				data-aos-offset="200"
 				data-aos-delay="50"
-				data-aos-duration="2000"
+				data-aos-duration="1000"
 				data-aos-easing="ease-in-out"
 				data-aos-anchor-placement="top-center"
 				className="card shadow-xl glass"
@@ -22,7 +23,7 @@ const ServiceCard = ({ event }) => {
 					<h2 className="card-title">{name}</h2>
 					<p className="">{short_description}</p>
 					<button className="w-full bg-primary-dark text-light px-5 rounded-md py-2">
-						Book Now
+						<Link to={`/event/${id}`}>Book Now</Link>
 					</button>
 				</div>
 			</div>

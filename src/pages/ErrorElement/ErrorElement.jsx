@@ -2,11 +2,13 @@ import Lottie from 'lottie-react';
 import { Link } from 'react-router-dom';
 import ErrorAnimation from '../../assets/Error.json';
 import { BsArrowLeft } from 'react-icons/bs';
+import Header from '../../component/Header/Header';
 
 const ErrorElement = () => {
 	return (
 		<div>
-			<div className="grid h-screen px-4 bg-white place-content-center">
+			<Header />
+			<div className="grid px-4 bg-white place-content-center">
 				<div>
 					<Lottie animationData={ErrorAnimation} loop={true} />
 				</div>

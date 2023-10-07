@@ -64,7 +64,7 @@ const Header = () => {
 						</label>
 						<ul
 							tabIndex={0}
-							className="flex flex-col dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 gap-2 hover:bg-base-100 focus:bg-base-100 active:bg-base-100"
+							className="flex flex-col dropdown-content mt-3 z-10 p-4 shadow bg-base-100 rounded-box w-52 gap-2 hover:bg-base-100 focus:bg-base-100 active:bg-base-100"
 						>
 							{navLinks}
 						</ul>

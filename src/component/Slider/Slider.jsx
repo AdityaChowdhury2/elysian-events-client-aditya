@@ -36,7 +36,7 @@ const Slider = () => {
 							className={`bg-cover bg-center p-4 md:p-20 bg-gray bg-opacity-80 h-[700px]  flex justify-center items-center bg-blend-overlay `}
 						>
 							<div className="max-w-7xl mx-auto space-y-8">
-								<h1 className="font-dela-gothic bg-gradient-to-tr from-primary-color to-light text-transparent bg-clip-text text-center text-xl md:text-6xl leading-relaxed">
+								<h1 className="font-dela-gothic bg-gradient-to-tr from-primary-color to-light text-transparent bg-clip-text text-center text-xl md:text-6xl py-4">
 									{slider.title}
 								</h1>
 								<h3 className="text-light md:text-4xl text-lg font-cedarville-cursive text-center">

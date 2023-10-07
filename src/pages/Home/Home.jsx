@@ -19,17 +19,20 @@ const Home = () => {
 				<h3
 					className="font-medium text-4xl text-center"
 					data-aos="fade-up"
-					data-aos-delay="800"
-					data-aos-easing="ease"
+					data-aos-offset="200"
+					data-aos-delay="50"
+					data-aos-duration="1000"
+					data-aos-easing="ease-in-out"
+					data-aos-anchor-placement="top-center"
 				>
 					Our
 					<span className="text-primary-color "> Services</span>
 					<div className="mx-auto h-1 mt-10 mb-12 bg-primary-color w-28"></div>
 				</h3>
 
-				<div className="bg-service py-20 ">
+				<div className="bg-service py-20 bg-no-repeat">
 					<div className="container ">
-						<div className="grid grid-cols-1 lg:grid-cols-4 gap-10">
+						<div className="grid grid-cols-1 lg:grid-cols-3 gap-10 p-3">
 							{events.map(event => (
 								<ServiceCard key={event.id} event={event} />
 							))}
