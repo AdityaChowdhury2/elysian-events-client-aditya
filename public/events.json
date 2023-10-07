@@ -1,0 +1,130 @@
+[
+  {
+    "id": 1,
+    "name": "Wedding Planning",
+    "image": "https://i.ibb.co/56dvZ1P/wedding.jpg",
+    "price": 50000,
+    "short_description": "Exquisite wedding planning to make your day unforgettable.",
+    "long_description": "Our wedding planning service is designed to turn your dreams into reality. We handle every detail, from venue selection to decor and entertainment, to create a magical wedding experience.",
+    "features": [
+      "Venue selection and booking",
+      "Decor and theme planning",
+      "Catering and menu customization",
+      "Entertainment and music arrangements",
+      "Guest management",
+      "Event coordination"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Birthday Parties",
+    "image": "https://i.ibb.co/s2h668T/birthday-celebrations-with-screaming-friends.jpg",
+    "price": 15000,
+    "short_description": "Fun and memorable birthday parties tailored to your preferences.",
+    "long_description": "We specialize in planning birthday parties that cater to all ages. Whether it's a kid's birthday or a milestone celebration, we create a joyful atmosphere with custom themes, games, and entertainment.",
+    "features": [
+      "Theme selection and decoration",
+      "Cake and dessert arrangements",
+      "Entertainment for kids and adults",
+      "Party favors and goody bags",
+      "Venue setup and cleanup",
+      "Event photography"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Baby Showers",
+    "image": "https://i.ibb.co/cx3PQRL/6b5196adce.jpg",
+    "price": 12000,
+    "short_description": "Joyful baby showers to celebrate the upcoming arrival of a new family member.",
+    "long_description": "Our baby shower planning service is designed to create a warm and welcoming atmosphere for expecting parents. We handle decorations, games, and everything needed to make this moment special.",
+    "features": [
+      "Theme selection and decor",
+      "Baby-themed games and activities",
+      "Gift registry assistance",
+      "Catering and refreshments",
+      "Venue setup and cleanup",
+      "Event photography"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Anniversary Celebrations",
+    "image": "https://i.ibb.co/fdYqrQm/anniversary.jpg",
+    "price": 25000,
+    "short_description": "Romantic anniversary celebrations to cherish your love story.",
+    "long_description": "Celebrate your love and milestones with our anniversary planning service. We create intimate and romantic settings, handle reservations, and make every moment special.",
+    "features": [
+      "Venue selection and romantic decor",
+      "Private dining arrangements",
+      "Entertainment and live music",
+      "Photography and memory books",
+      "Customized gifts and surprises",
+      "Event coordination"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Festival Events",
+    "image": "https://i.ibb.co/rymn900/festive.jpg",
+    "price": 40000,
+    "short_description": "Vibrant and culturally rich festival event planning.",
+    "long_description": "Experience the vibrancy of festivals with our event planning service. We organize festivals, fairs, and cultural events with traditional decor, performances, and culinary delights.",
+    "features": [
+      "Festival theme and decor",
+      "Traditional food stalls and cuisine",
+      "Live performances and cultural shows",
+      "Artisan markets and crafts",
+      "Games and activities for all ages",
+      "Security and crowd management"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Graduation Parties",
+    "image": "https://i.ibb.co/Xz30yVK/graduation.jpg",
+    "price": 18000,
+    "short_description": "Memorable graduation parties to celebrate academic achievements.",
+    "long_description": "Our graduation party planning service helps honor the hard work and dedication of graduates. We arrange venues, decorations, and entertainment for a memorable celebration.",
+    "features": [
+      "Venue selection and decoration",
+      "Customized graduation themes",
+      "Guest speakers and awards",
+      "Catering and refreshments",
+      "Music and entertainment",
+      "Event photography"
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Retirement Parties",
+    "image": "https://i.ibb.co/BTTBvxV/retirement.jpg",
+    "price": 22000,
+    "short_description": "Heartfelt retirement parties to bid farewell to valued colleagues.",
+    "long_description": "Our retirement party planning service ensures that retiring employees are celebrated with dignity and appreciation. We arrange venues, speeches, and memorable experiences.",
+    "features": [
+      "Venue selection and decor",
+      "Retirement speeches and tributes",
+      "Catering and refreshments",
+      "Entertainment and gifts",
+      "Event coordination",
+      "Event photography"
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Housewarming Parties",
+    "image": "https://i.ibb.co/GQrwKc5/houseparty.jpg",
+    "price": 16000,
+    "short_description": "Warm and welcoming housewarming parties to celebrate a new home.",
+    "long_description": "Our housewarming party planning service is designed to create a warm and welcoming atmosphere for those moving into a new home. We handle decorations, refreshments, and all the details to make the occasion memorable.",
+    "features": [
+      "Theme selection and decor",
+      "House tours for guests",
+      "Catering and refreshments",
+      "Entertainment and games",
+      "Housewarming gifts and surprises",
+      "Event coordination"
+    ]
+  }
+]

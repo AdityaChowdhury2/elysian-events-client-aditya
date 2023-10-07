@@ -17,6 +17,7 @@ const Router = createBrowserRouter([
 			{
 				path: '/',
 				element: <Home />,
+				loader: () => fetch('/events.json'),
 			},
 			{
 				path: '/blog',

@@ -1,6 +1,7 @@
 import Lottie from 'lottie-react';
 import { Link } from 'react-router-dom';
 import ErrorAnimation from '../../assets/Error.json';
+import { BsArrowLeft } from 'react-icons/bs';
 
 const ErrorElement = () => {
 	return (
@@ -15,12 +16,15 @@ const ErrorElement = () => {
 					</h1>
 
 					<p className="mt-4 text-gray-500">We can&apos;t find that page.</p>
-					<Link
-						to={'/'}
-						className="inline-block px-5 py-3 mt-6 text-sm font-medium text-white bg-indigo-600 rounded hover:bg-indigo-700 focus:outline-none focus:ring"
-					>
-						Go Back Home
-					</Link>
+					<div className="flex justify-center">
+						<Link
+							to={'/'}
+							className="mt-6  text-sm font-medium   bg-primary-color  hover:bg-primary-dark  text-light px-5 rounded-md py-2 flex items-center gap-2"
+						>
+							<BsArrowLeft />
+							Go Back Home
+						</Link>
+					</div>
 				</div>
 			</div>
 		</div>

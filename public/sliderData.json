@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "title": "Crafting Memorable Moments",
+        "bgImage": "https://i.ibb.co/R2XpYBT/wedding-2595862-1280.jpg",
+        "subtitle": "Your Vision, Our Expertise",
+        "description": "At Elysian Events, we specialize in turning your dreams into reality. From weddings to corporate gatherings, we meticulously plan and execute every detail, ensuring your event is truly unforgettable. Let us transform your vision into a breathtaking reality."
+    },
+    {
+        "id": 2,
+        "title": "Elevating Your Celebrations",
+        "bgImage": "https://i.ibb.co/xHFMH6K/a7fe7b0870.jpg",
+        "subtitle": "Creating Timeless Events",
+        "description": "Our team at Opulent Occasions is dedicated to elevating your celebrations to the next level. With a keen eye for detail and a passion for creativity, we craft timeless events that leave lasting impressions. Let us take your special moments to new heights."
+    },
+    {
+        "id": 3,
+        "title": "Experience Extraordinary Events",
+        "bgImage": "https://i.ibb.co/pnd3RfL/fd62d5e73c.jpg",
+        "subtitle": "Tailored Just for You",
+        "description": "Serenity Soirees is your partner in experiencing extraordinary events. Each celebration we design is a unique reflection of your style and preferences. Our commitment to excellence ensures that your event is a one-of-a-kind masterpiece."
+    }
+]
