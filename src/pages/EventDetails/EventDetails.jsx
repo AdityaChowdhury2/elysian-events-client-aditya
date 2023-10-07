@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Link, useLoaderData, useParams } from 'react-router-dom';
+import { useLoaderData, useParams } from 'react-router-dom';
 
 const EventDetails = () => {
 	const [singleEvent, setSingleEvent] = useState(null);
@@ -13,8 +13,7 @@ const EventDetails = () => {
 		setLoading(false);
 	}, [eventData, eventId]);
 	console.log(singleEvent);
-	const { id, image, name, long_description, price, features } =
-		singleEvent || {};
+	const { image, name, long_description, price, features } = singleEvent || {};
 
 	return (
 		<>
@@ -47,7 +46,9 @@ const EventDetails = () => {
 									</p>
 									<p className="mt-3">
 										Price:{' '}
-										<span className="text-primary-color my-4">{price}Tk</span>
+										<span className="text-primary-color my-4 font-bold">
+											{price}Tk
+										</span>
 									</p>
 									<button className="bg-primary-color py-1 mt-3 px-3 rounded-md">
 										Book Now

@@ -7,7 +7,8 @@ export default {
   theme: {
     backgroundImage: {
       'service': 'url("/services.png")',
-      'gradient-to-tr': 'linear-gradient(to top right, var(--tw-gradient-stops))'
+      'gradient-to-tr': 'linear-gradient(to top right, var(--tw-gradient-stops))',
+      'stats': "url('https://i.ibb.co/4THnNmL/aac2a2277a.jpg')",
     },
     colors: {
       'primary-color': '#FF5733',
