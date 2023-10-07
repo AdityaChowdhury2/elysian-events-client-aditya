@@ -30,7 +30,7 @@ const Home = () => {
 					<div className="mx-auto h-1 mt-10 mb-12 bg-primary-color w-28"></div>
 				</h3>
 
-				<div className="bg-service py-20 bg-no-repeat">
+				<div className="bg-service py-20 bg-no-repeat bg-cover">
 					<div className="container ">
 						<div className="grid grid-cols-1 lg:grid-cols-3 gap-10 p-3">
 							{events.map(event => (

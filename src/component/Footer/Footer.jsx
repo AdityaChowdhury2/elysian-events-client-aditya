@@ -4,7 +4,7 @@ import AOS from 'aos'; // You can also use <link> for styles
 AOS.init();
 const Footer = () => {
 	return (
-		<div className="bg-gray text-light " data-aos="fade-up">
+		<div className="bg-gray text-light">
 			<footer className="footer p-10 container">
 				<aside>
 					<Logo />
