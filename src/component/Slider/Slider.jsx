@@ -1,36 +1,42 @@
-import { Swiper, SwiperSlide } from 'swiper/react';
 import { BsArrowRight } from 'react-icons/bs';
-import 'swiper/css';
-import 'swiper/css/effect-fade';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
+import { useRef, useEffect, useState } from 'react';
+import { register } from 'swiper/element/bundle';
 
-// import required modules
-import { Autoplay } from 'swiper/modules';
-import { useEffect, useState } from 'react';
+register();
 
 const Slider = () => {
 	const [sliderData, setSliderData] = useState(null);
+	const swiperElRef = useRef(null);
 	useEffect(() => {
 		fetch('/sliderData.json')
 			.then(res => res.json())
 			.then(data => setSliderData(data));
 	}, []);
+	// useEffect(() => {
+	// 	// listen for Swiper events using addEventListener
+	// 	swiperElRef.current.addEventListener('progress', e => {
+	// 		const [swiper, progress] = e.detail;
+	// 		console.log(progress);
+	// 	});
+
+	// 	swiperElRef.current.addEventListener('slidechange', e => {
+	// 		console.log('slide changed');
+	// 	});
+	// }, []);
 
 	return (
 		<>
-			<Swiper
-				spaceBetween={30}
-				effect={'fade'}
-				autoplay={{
-					delay: 4000,
-					disableOnInteraction: false,
-				}}
-				modules={[Autoplay]}
-				className="mySwiper"
+			<swiper-container
+				ref={swiperElRef}
+				class="mySwiper"
+				space-between="30"
+				effect="fade"
+				autoplay-delay="2500"
+				autoplay-disable-on-interaction="false"
+				loop="true"
 			>
 				{sliderData?.map(slider => (
-					<SwiperSlide key={slider.id}>
+					<swiper-slide key={slider.id}>
 						<div
 							style={{ backgroundImage: `url("${slider.bgImage}")` }}
 							className={`bg-cover bg-center p-4 md:p-20 bg-gray bg-opacity-80 h-[700px]  flex justify-center items-center bg-blend-overlay `}
@@ -52,9 +58,9 @@ const Slider = () => {
 								</div>
 							</div>
 						</div>
-					</SwiperSlide>
+					</swiper-slide>
 				))}
-			</Swiper>
+			</swiper-container>
 		</>
 	);
 };
