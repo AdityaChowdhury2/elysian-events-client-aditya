@@ -21,7 +21,7 @@ const ErrorElement = () => {
 					<div className="flex justify-center">
 						<Link
 							to={'/'}
-							className="mt-6  text-sm font-medium   bg-primary-color  hover:bg-primary-dark  text-light px-5 rounded-md py-2 flex items-center gap-2"
+							className="mt-6 text-sm font-medium   bg-orange-500  hover:bg-orange-600 text-orange-50 px-5 rounded-md py-2 flex items-center gap-2"
 						>
 							<BsArrowLeft />
 							Go Back Home

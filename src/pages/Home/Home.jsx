@@ -1,6 +1,5 @@
 import { Helmet } from 'react-helmet-async';
 import Slider from '../../component/Slider/Slider';
-
 import { useLoaderData } from 'react-router-dom';
 import ServiceCard from '../../component/ServiceCard/ServiceCard';
 import useAuthData from '../../hooks/useAuthData';
@@ -11,28 +10,6 @@ import SectionHeading from '../../component/SectionHeading/SectionHeading';
 const Home = () => {
 	const events = useLoaderData();
 	const { user } = useAuthData();
-	// console.log(events);
-	// const params = {
-	// 	effect: 'coverflow',
-	// 	grabCursor: true,
-	// 	lazy: true,
-	// 	centeredSlides: true,
-	// 	slidesPerView: 'auto',
-	// 	autoplay: {
-	// 		delay: 2500,
-	// 		disableOnInteraction: false,
-	// 	},
-	// 	coverflowEffect: {
-	// 		rotate: 50,
-	// 		stretch: 0,
-	// 		depth: 100,
-	// 		modifier: 1,
-	// 		slideShadows: true,
-	// 	},
-	// 	// pagination: {
-	// 	// 	el: '.swiper-pagination',
-	// 	// },
-	// };
 	console.log(user);
 
 	return (
@@ -57,8 +34,8 @@ const Home = () => {
 			</section>
 			<section className="mb-16">
 				<SectionHeading title="Stats" />
-				<div className="bg-stats py-20 bg-center bg-no-repeat bg-cover bg-gray bg-blend-overlay bg-opacity-90">
-					<div className="container grid grid-cols-1 md:grid-cols-4 text-light">
+				<div className="bg-stats py-40 bg-center bg-no-repeat bg-cover bg-neutral-700 bg-blend-overlay bg-opacity-90">
+					<div className="container grid grid-cols-1 md:grid-cols-4 text-orange-50">
 						<div className="text-center">
 							<h2 className="font-dela-gothic py-5 text-4xl">
 								<CountUp
@@ -67,7 +44,13 @@ const Home = () => {
 									delay={5}
 									enableScrollSpy
 									duration={3.75}
-								/>
+								>
+									{({ countUpRef }) => (
+										<div>
+											<span ref={countUpRef} />
+										</div>
+									)}
+								</CountUp>
 							</h2>
 							<p>Featured Events</p>
 						</div>
@@ -79,7 +62,13 @@ const Home = () => {
 									delay={5}
 									enableScrollSpy
 									duration={3.75}
-								/>
+								>
+									{({ countUpRef }) => (
+										<div>
+											<span ref={countUpRef} />
+										</div>
+									)}
+								</CountUp>
 							</h2>
 							<p>Loyal Customers</p>
 						</div>
@@ -91,7 +80,13 @@ const Home = () => {
 									delay={2}
 									enableScrollSpy
 									duration={3.75}
-								/>
+								>
+									{({ countUpRef }) => (
+										<div>
+											<span ref={countUpRef} />
+										</div>
+									)}
+								</CountUp>
 							</h2>
 							<p>Good Comments</p>
 						</div>
@@ -103,7 +98,13 @@ const Home = () => {
 									delay={5}
 									enableScrollSpy
 									duration={3.75}
-								/>
+								>
+									{({ countUpRef }) => (
+										<div>
+											<span ref={countUpRef} />
+										</div>
+									)}
+								</CountUp>
 							</h2>
 							<p>Trophies Won</p>
 						</div>
@@ -111,7 +112,7 @@ const Home = () => {
 				</div>
 			</section>
 
-			<section className="gallery bg-light">
+			<section className="gallery bg-orange-50">
 				<SectionHeading title="Gallery" />
 				<swiper-container
 					class="mySwiper"

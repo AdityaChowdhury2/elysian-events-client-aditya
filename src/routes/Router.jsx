@@ -2,7 +2,6 @@ import { createBrowserRouter } from 'react-router-dom';
 import MainLayout from '../layouts/MainLayout';
 import ErrorElement from '../pages/ErrorElement/ErrorElement';
 import Home from '../pages/Home/Home';
-import Blog from '../pages/Blog/Blog';
 import Contact from '../pages/Contact/Contact';
 import Login from '../pages/Login/Login';
 import Register from '../pages/Register/Register';
@@ -10,6 +9,7 @@ import About from '../pages/About/About';
 import EventDetails from '../pages/EventDetails/EventDetails';
 import PrivateRoute from './PrivateRoute';
 import Profile from '../pages/Profile/Profile';
+import Blogs from '../pages/Blogs/Blogs';
 
 const Router = createBrowserRouter([
 	{
@@ -24,7 +24,8 @@ const Router = createBrowserRouter([
 			},
 			{
 				path: '/blog',
-				element: <Blog />,
+				element: <Blogs />,
+				loader: () => fetch('/blogs.json'),
 			},
 			{
 				path: '/contact',

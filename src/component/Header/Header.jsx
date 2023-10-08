@@ -15,7 +15,7 @@ const Header = () => {
 			<li>
 				<NavLink
 					to="/"
-					className={({ isActive }) => (isActive ? 'text-primary-color' : '')}
+					className={({ isActive }) => (isActive ? 'text-orange-500' : '')}
 				>
 					Home
 				</NavLink>
@@ -23,7 +23,7 @@ const Header = () => {
 			<li>
 				<NavLink
 					to={'/blog'}
-					className={({ isActive }) => (isActive ? 'text-primary-color ' : '')}
+					className={({ isActive }) => (isActive ? 'text-orange-500 ' : '')}
 				>
 					Blog
 				</NavLink>
@@ -31,7 +31,7 @@ const Header = () => {
 			<li>
 				<NavLink
 					to={'/about'}
-					className={({ isActive }) => (isActive ? 'text-primary-color ' : '')}
+					className={({ isActive }) => (isActive ? 'text-orange-500 ' : '')}
 				>
 					About
 				</NavLink>
@@ -39,7 +39,7 @@ const Header = () => {
 			<li>
 				<NavLink
 					to={'/contact'}
-					className={({ isActive }) => (isActive ? 'text-primary-color ' : '')}
+					className={({ isActive }) => (isActive ? 'text-orange-500 ' : '')}
 				>
 					Contact
 				</NavLink>
@@ -77,9 +77,7 @@ const Header = () => {
 				<li>
 					<NavLink
 						to={'/login'}
-						className={({ isActive }) =>
-							isActive ? 'text-primary-color ' : ''
-						}
+						className={({ isActive }) => (isActive ? 'text-orange-500 ' : '')}
 					>
 						Login
 					</NavLink>

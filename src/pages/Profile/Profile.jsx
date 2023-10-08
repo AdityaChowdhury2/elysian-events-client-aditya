@@ -107,7 +107,7 @@ const Profile = () => {
 					</div>
 				</div>
 				<div className="flex justify-center mb-12">
-					<button className="bg-primary-color hover:bg-primary-dark text-light px-3 py-2 rounded-md">
+					<button className="bg-orange-500 hover:bg-orange-600 text-orange-50 px-3 py-2 rounded-md">
 						Submit
 					</button>
 				</div>

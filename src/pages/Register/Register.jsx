@@ -55,7 +55,7 @@ const Register = () => {
 						className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100"
 					>
 						<form onSubmit={handleRegister} className="card-body space-y-4">
-							<h4 className="text-center font-bold text-primary-color ">
+							<h4 className="text-center font-bold text-orange-500 ">
 								Registration
 							</h4>
 
@@ -63,11 +63,11 @@ const Register = () => {
 								<input
 									type="text"
 									name="name"
-									className="peer h-full w-full border-b bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal outline outline-0 transition-all focus:border-primary-color focus:outline-0"
+									className="peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border-blue-gray-200 focus:border-orange-500 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
 									placeholder=" "
 									required
 								/>
-								<label className="after:content[' '] pointer-events-none absolute left-0 -top-1.5 flex h-full w-full select-none text-[11px] font-normal leading-tight text-blue-gray-500 transition-all after:absolute after:-bottom-1.5 after:block after:w-full after:scale-x-0 after:border-b-2 after:border-primary-color after:transition-transform after:duration-300 peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[4.25] peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-primary-color peer-focus:after:scale-x-100 peer-focus:after:border-primary-color peer-disabled:text-transparent peer-disabled">
+								<label className="after:content[' '] pointer-events-none absolute left-0 -top-1.5 flex h-full w-full select-none text-[11px] font-normal leading-tight text-blue-gray-500 transition-all after:absolute after:-bottom-1.5 after:block after:w-full after:scale-x-0 after:border-b-2 after:border-orange-500 after:transition-transform after:duration-300 peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[4.25] peer-placeholder-shown:text-blue-gray-500 peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-orange-500 peer-focus:after:scale-x-100 peer-focus:after:border-orange-500 peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500">
 									Name
 								</label>
 							</div>
@@ -75,11 +75,11 @@ const Register = () => {
 								<input
 									type="email"
 									name="email"
-									className="peer h-full w-full border-b bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal outline outline-0 transition-all focus:border-primary-color focus:outline-0"
+									className="peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border-blue-gray-200 focus:border-orange-500 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
 									placeholder=" "
 									required
 								/>
-								<label className="after:content[' '] pointer-events-none absolute left-0 -top-1.5 flex h-full w-full select-none text-[11px] font-normal leading-tight text-blue-gray-500 transition-all after:absolute after:-bottom-1.5 after:block after:w-full after:scale-x-0 after:border-b-2 after:border-primary-color after:transition-transform after:duration-300 peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[4.25] peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-primary-color peer-focus:after:scale-x-100 peer-focus:after:border-primary-color peer-disabled:text-transparent peer-disabled">
+								<label className="after:content[' '] pointer-events-none absolute left-0 -top-1.5 flex h-full w-full select-none text-[11px] font-normal leading-tight text-blue-gray-500 transition-all after:absolute after:-bottom-1.5 after:block after:w-full after:scale-x-0 after:border-b-2 after:border-orange-500 after:transition-transform after:duration-300 peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[4.25] peer-placeholder-shown:text-blue-gray-500 peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-orange-500 peer-focus:after:scale-x-100 peer-focus:after:border-orange-500 peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500">
 									Email
 								</label>
 							</div>
@@ -88,11 +88,11 @@ const Register = () => {
 								<input
 									type={`${isEyesOpen ? 'password' : 'text'}`}
 									name="password"
-									className="peer h-full w-full border-b bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal outline outline-0 transition-all focus:border-primary-color focus:outline-0"
+									className="peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border-blue-gray-200 focus:border-orange-500 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
 									placeholder=" "
 									required
 								/>
-								<label className="after:content[' '] pointer-events-none absolute left-0 -top-1.5 flex h-full w-full select-none text-[11px] font-normal leading-tight text-blue-gray-500 transition-all after:absolute after:-bottom-1.5 after:block after:w-full after:scale-x-0 after:border-b-2 after:border-primary-color after:transition-transform after:duration-300 peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[4.25] peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-primary-color peer-focus:after:scale-x-100 peer-focus:after:border-primary-color peer-disabled:text-transparent peer-disabled">
+								<label className="after:content[' '] pointer-events-none absolute left-0 -top-1.5 flex h-full w-full select-none text-[11px] font-normal leading-tight text-blue-gray-500 transition-all after:absolute after:-bottom-1.5 after:block after:w-full after:scale-x-0 after:border-b-2 after:border-orange-500 after:transition-transform after:duration-300 peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[4.25] peer-placeholder-shown:text-blue-gray-500 peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-orange-500 peer-focus:after:scale-x-100 peer-focus:after:border-orange-500 peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500">
 									Password
 								</label>
 								<div
@@ -103,14 +103,14 @@ const Register = () => {
 								</div>
 							</div>
 							<div className="form-control mt-6">
-								<button className="bg-primary-color hover:bg-primary-dark py-2 rounded-md text-light">
+								<button className="bg-orange-500 hover:bg-orange-600 py-2 rounded-md text-gray-100">
 									Register
 								</button>
 							</div>
 							<SocialLogin />
 							<p className="text-sm text-center mt-4">
 								Already have an Account?{' '}
-								<Link to="/login" className="text-primary-color">
+								<Link to="/login" className="text-orange-500">
 									Sign in
 								</Link>
 							</p>

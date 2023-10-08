@@ -1,4 +1,5 @@
 import { Helmet } from 'react-helmet-async';
+import PageHeader from '../../component/PageHeader/PageHeader';
 
 const Contact = () => {
 	return (
@@ -6,6 +7,7 @@ const Contact = () => {
 			<Helmet>
 				<title>Elysian Events | Contact</title>
 			</Helmet>
+			<PageHeader title="Blogs From Us" />
 		</div>
 	);
 };

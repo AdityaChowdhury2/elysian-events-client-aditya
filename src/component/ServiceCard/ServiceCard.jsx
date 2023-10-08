@@ -12,19 +12,19 @@ const ServiceCard = ({ event }) => {
 				data-aos-delay="50"
 				data-aos-duration="1000"
 				data-aos-easing="ease-in-out"
-				data-aos-anchor-placement="top-center"
+				data-aos-anchor-placement="top-bottom"
 				className="card shadow-xl glass"
 			>
 				<figure className="">
 					<img src={image} alt={name} className="h-56 w-full" />
 				</figure>
 
-				<div className="card-body text-gray-dark">
+				<div className="card-body text-gray-800">
 					<h2 className="card-title">{name}</h2>
 					<p className="">{short_description}</p>
 					<p>Price: &#2547;{price}</p>
 					<Link to={`/event/${id}`}>
-						<button className="w-full bg-primary-dark text-light px-5 rounded-md py-2">
+						<button className="w-full bg-orange-600 text-orange-50 px-5 rounded-md py-2">
 							View Details
 						</button>
 					</Link>

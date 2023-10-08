@@ -13,9 +13,9 @@ const SectionHeading = ({ title }) => {
 				data-aos-anchor-placement="top-bottom"
 			>
 				Our
-				<span className="text-primary-color "> {title}</span>
+				<span className="text-orange-500 "> {title}</span>
 			</h3>
-			<div className="mx-auto h-1 mt-10 mb-12 bg-primary-color w-28"></div>
+			<div className="mx-auto h-1 mt-10 mb-12 bg-orange-500 w-28"></div>
 		</div>
 	);
 };

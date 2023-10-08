@@ -39,20 +39,20 @@ const Slider = () => {
 					<swiper-slide key={slider.id}>
 						<div
 							style={{ backgroundImage: `url("${slider.bgImage}")` }}
-							className={`bg-cover bg-center p-4 md:p-20 bg-gray bg-opacity-80 h-[700px]  flex justify-center items-center bg-blend-overlay `}
+							className={`bg-cover bg-center p-4 md:p-20 bg-gray-700 bg-opacity-80 h-[700px]  flex justify-center items-center bg-blend-overlay `}
 						>
 							<div className="max-w-7xl mx-auto space-y-8">
-								<h1 className="font-dela-gothic bg-gradient-to-tr from-primary-color to-light text-transparent bg-clip-text text-center text-xl md:text-6xl py-4">
+								<h1 className="font-dela-gothic bg-gradient-to-tr from-orange-500 to-orange-100 text-transparent bg-clip-text text-center text-xl md:text-6xl py-4">
 									{slider.title}
 								</h1>
-								<h3 className="text-light md:text-4xl text-lg font-cedarville-cursive text-center">
+								<h3 className="text-orange-50 md:text-4xl text-lg font-cedarville-cursive text-center">
 									{slider.subtitle}
 								</h3>
-								<p className="text-light  text-center text-sm md:text-lg">
+								<p className="text-orange-50  text-center text-sm md:text-lg">
 									{slider.description}
 								</p>
 								<div className="flex justify-center">
-									<button className="bg-primary-color  hover:bg-primary-dark  text-light px-5 rounded-md py-2 flex items-center gap-2">
+									<button className="bg-orange-500  hover:bg-orange-600  text-orange-50 px-5 rounded-md py-2 flex items-center gap-2">
 										Book Now <BsArrowRight />
 									</button>
 								</div>

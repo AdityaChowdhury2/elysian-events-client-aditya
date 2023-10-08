@@ -6,7 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const MainLayout = () => {
 	return (
-		<div className="font-poppins text-gray bg-light">
+		<div className="font-poppins text-gray-600 bg-orange-50">
 			<Header />
 			<Outlet />
 			<Footer />
