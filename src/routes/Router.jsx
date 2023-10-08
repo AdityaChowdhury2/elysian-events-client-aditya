@@ -10,6 +10,7 @@ import EventDetails from '../pages/EventDetails/EventDetails';
 import PrivateRoute from './PrivateRoute';
 import Profile from '../pages/Profile/Profile';
 import Blogs from '../pages/Blogs/Blogs';
+import BlogDetails from '../pages/BlogDetails/BlogDetails';
 
 const Router = createBrowserRouter([
 	{
@@ -59,6 +60,15 @@ const Router = createBrowserRouter([
 						<Profile />
 					</PrivateRoute>
 				),
+			},
+			{
+				path: '/blog/:blogId',
+				element: (
+					<PrivateRoute>
+						<BlogDetails />
+					</PrivateRoute>
+				),
+				loader: () => fetch('/blogs.json'),
 			},
 		],
 	},

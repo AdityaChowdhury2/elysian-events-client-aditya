@@ -12,6 +12,7 @@
   "dependencies": {
     "aos": "^2.3.4",
     "firebase": "^10.4.0",
+    "html-react-parser": "^4.2.2",
     "localforage": "^1.10.0",
     "lottie-react": "^2.4.0",
     "match-sorter": "^6.3.1",

@@ -7,7 +7,7 @@ const Contact = () => {
 			<Helmet>
 				<title>Elysian Events | Contact</title>
 			</Helmet>
-			<PageHeader title="Blogs From Us" />
+			<PageHeader title="Talk to Us" />
 		</div>
 	);
 };
