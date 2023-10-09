@@ -12,3 +12,9 @@ This is created for a social events management company. In home page there users
 - User can update his name in profile section
 - In Login and registration toast will be shown when some error occurs and for successful login success message will be shown
 - AOS is used for handle some animations
+
+## 🔗 Links
+
+[Live Link](https://elysian-events-aditya.web.app)
+
+[Quiz's Answer](https://github.com/programming-hero-web-course-4/b8a9-event-management-AdityaChowdhury2/blob/main/Question_and_Answer.md)
