@@ -26,10 +26,10 @@ const BlogDetails = () => {
 					<span className="loading loading-spinner loading-lg text-orange-500"></span>
 				</div>
 			) : (
-				<div className="container p-4 my-12 flex gap-20 ">
-					<div className="w-2/3 space-y-8">
+				<div className="container p-4 my-12 flex flex-col md:flex-row gap-20 ">
+					<div className="md:w-2/3 space-y-8">
 						<h2
-							className=" font-bold text-5xl
+							className=" font-bold text-2xl md:text-5xl
                         leading-normal"
 						>
 							{singleBlog.title}

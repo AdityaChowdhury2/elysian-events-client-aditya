@@ -1,14 +1,39 @@
 import { useState } from 'react';
 import useAuthData from '../../hooks/useAuthData';
 import userImage from '/user.svg';
+import toast from 'react-hot-toast';
 
 const Profile = () => {
-	const { user } = useAuthData();
-	const [userProfile, setUserProfile] = useState(user);
+	const { user, updateNameAndDisplayPicture } = useAuthData();
+	const [userProfile, setUserProfile] = useState({
+		displayName: user?.displayName,
+		email: user?.email,
+		photoURL: user?.photoURL,
+	});
+
+	const handleSubmit = e => {
+		e.preventDefault();
+		const form = new FormData(e.currentTarget);
+		e.currentTarget.reset();
+		const user = {};
+		for (const data of form.entries()) {
+			user[data[0]] = data[1];
+		}
+		setUserProfile({ ...userProfile, ...user });
+
+		updateNameAndDisplayPicture(userProfile)
+			.then(() => {
+				toast.success('Profile Updated');
+			})
+			.catch(err => {
+				console.log(err.message);
+			});
+	};
+
 	return (
-		<>
+		<div className="p-4">
 			<h3 className="text-center font-bold text-2xl">Edit Profile</h3>
-			<form>
+			<form onSubmit={handleSubmit}>
 				<div className="grid grid-cols-1 lg:grid-cols-5 container lg:gap-8 my-12">
 					<div className="space-y-4 flex flex-col justify-center items-center">
 						<img
@@ -18,6 +43,7 @@ const Profile = () => {
 						/>
 
 						<input
+							name="filename"
 							type="file"
 							className="file-input file-input-accent file-input-sm w-full max-w-xs"
 						/>
@@ -29,7 +55,7 @@ const Profile = () => {
 							</label>
 							<input
 								type="text"
-								name="name"
+								name="displayName"
 								placeholder="Name"
 								value={userProfile?.displayName || ''}
 								className="input input-bordered"
@@ -77,31 +103,30 @@ const Profile = () => {
 								name="x-username"
 								placeholder="www.twitter.com/"
 								className="input input-bordered"
-								required
 							/>
 						</div>
 						<div className="form-control">
 							<label className="label">
-								<span className="label-text">Password</span>
+								<span className="label-text">New Password</span>
 							</label>
 							<input
+								disabled
 								type="password"
 								name="newPassword"
 								placeholder="New Password"
 								className="input input-bordered"
-								required
 							/>
 						</div>
 						<div className="form-control">
 							<label className="label">
-								<span className="label-text">Password</span>
+								<span className="label-text">Confirm Password</span>
 							</label>
 							<input
+								disabled
 								type="password"
 								name="confirmPassword"
 								placeholder="Confirm Password"
 								className="input input-bordered"
-								required
 							/>
 						</div>
 					</div>
@@ -112,7 +137,7 @@ const Profile = () => {
 					</button>
 				</div>
 			</form>
-		</>
+		</div>
 	);
 };
 

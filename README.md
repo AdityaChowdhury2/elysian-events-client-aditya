@@ -1,8 +1,14 @@
-# React + Vite
+# Elysians Events - An event management company website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is created for a social events management company. In home page there users will see the services offers by the company. For see the details of a service user need to complete registration process. Then user can see the service Features and other details. A logged in user can also read a blog and update his name from profile section.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Responsive design
+- User's login and registration is handled by firebase
+- Services offered by the company are shown in home page.
+- In Blog route blogs are shown
+- To read a full Blog user needs to login.
+- User can update his name in profile section
+- In Login and registration toast will be shown when some error occurs and for successful login success message will be shown
+- AOS is used for handle some animations

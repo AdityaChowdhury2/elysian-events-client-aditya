@@ -4,7 +4,7 @@ import LoginImage from './login.svg';
 import SocialLogin from '../../component/SocialLogin/SocialLogin';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import useAuthData from '../../hooks/useAuthData';
-import { toast } from 'react-toastify';
+import toast from 'react-hot-toast';
 
 const Login = () => {
 	const { signIn } = useAuthData();

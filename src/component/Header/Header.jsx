@@ -61,8 +61,7 @@ const Header = () => {
 									to={`/profile/${user?.uid}`}
 									className="justify-between cursor-pointer"
 								>
-									Profile
-									<span className="badge">New</span>
+									{user?.displayName ? user?.displayName : 'Profile'}
 								</Link>
 							</li>
 							<li>

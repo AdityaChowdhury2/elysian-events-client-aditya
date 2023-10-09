@@ -8,7 +8,7 @@ const PageHeader = ({ title, page }) => {
 	return (
 		<>
 			<div className="bg-header bg-cover bg-no-repeat bg-center bg-gray-700 bg-blend-overlay py-20">
-				<h2 className="text-orange-50 font-dela-gothic text-6xl py-5 text-center ">
+				<h2 className="text-orange-50 font-dela-gothic text-2xl md:text-6xl py-5 text-center ">
 					{title}
 				</h2>
 				<div className="text-sm breadcrumbs flex justify-center">

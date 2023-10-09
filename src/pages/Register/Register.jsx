@@ -2,10 +2,11 @@ import { Helmet } from 'react-helmet-async';
 import RegistrationImage from './registration.svg';
 import SocialLogin from '../../component/SocialLogin/SocialLogin';
 import { Link, useNavigate } from 'react-router-dom';
-import { toast } from 'react-toastify';
+
 import useAuthData from '../../hooks/useAuthData';
 import { BsEye, BsEyeSlash } from 'react-icons/bs';
 import { useState } from 'react';
+import toast from 'react-hot-toast';
 
 const Register = () => {
 	const { createUser } = useAuthData();

@@ -18,7 +18,7 @@ console.log(greetign);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: a
+#### Answer: A
 
 <i>Here greeting is declared as a let variable but assigned an empty object to greetign. As greetign is initialized as an empty object so, in 3rd line it will be logged {}. As it doesn't initialized with any variable declaration keyword so it has global scope.</i>
 

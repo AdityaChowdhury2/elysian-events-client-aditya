@@ -12,8 +12,8 @@ const Blogs = () => {
 				<title>Elysian Events | Blog</title>
 			</Helmet>
 			<PageHeader title="Blogs From Us" />
-			<div className="container p-4 my-12 flex gap-20 ">
-				<div className="w-2/3 space-y-8">
+			<div className="container p-4 my-12 flex flex-col md:flex-row gap-20 ">
+				<div className="md:w-2/3 space-y-8">
 					{blogs.map(blog => (
 						<Blog key={blog.id} blog={blog} />
 					))}
