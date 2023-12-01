@@ -24,7 +24,7 @@ const queryClient = new QueryClient({
 	},
 });
 
-axios.defaults.baseURL = 'http://localhost:5000';
+axios.defaults.baseURL = import.meta.env.VITE_SERVER_URL;
 // axios.defaults.baseURL = 'https://elysian-events-server.vercel.app';
 axios.defaults.withCredentials = true;
 

@@ -15,6 +15,11 @@ const SocialLogin = () => {
 				console.log(res.user);
 				navigate(location.state || '/');
 				toast.success('Login Successful');
+				console.log({
+					email: res.user.email,
+					name: res.user.displayName,
+					photoURL: res.user.photoURL,
+				});
 				axios.patch(`/user/${res.user.email}`, {
 					email: res.user.email,
 					displayName: res.user.displayName,

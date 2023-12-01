@@ -38,9 +38,9 @@ const Profile = () => {
 			for (const data of form.entries()) {
 				userObj[data[0]] = data[1];
 			}
-			const imageFile = userObj.userProfileImage;
+			const imageFile = userObj?.userProfileImage;
 			if (imageFile.size < 1000000) {
-				const convertedImage = await convertToBase64(userObj.userProfileImage);
+				const convertedImage = await convertToBase64(userObj?.userProfileImage);
 				const updatedUser = {
 					displayName: userObj.displayName,
 					userImage: convertedImage,
