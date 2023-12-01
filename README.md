@@ -13,8 +13,14 @@ This is created for a social events management company. In home page there users
 - In Login and registration toast will be shown when some error occurs and for successful login success message will be shown
 - AOS is used for handle some animations
 
+### UPDATES
+
+- Backend added using mongodb and express js
+- jwt added when user is logged in
+- private apis are secured in Backend with jwt token verification
+- user can update his profile in profile section
+- image data will be stored as base64 encoded in mongodb if user update his image in profile page
+
 ## 🔗 Links
 
 [Live Link](https://elysian-events-aditya.web.app)
-
-[Quiz's Answer](https://github.com/programming-hero-web-course-4/b8a9-event-management-AdityaChowdhury2/blob/main/Question_and_Answer.md)

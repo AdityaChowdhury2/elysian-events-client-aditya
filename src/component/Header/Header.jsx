@@ -3,13 +3,17 @@ import { HiMenuAlt3 } from 'react-icons/hi';
 import Logo from '../Logo/Logo';
 import useAuthData from '../../hooks/useAuthData';
 import userProfile from '/user.svg';
+import useGetUser from '../../hooks/useGetUser';
+
 const Header = () => {
 	const { user, logOut } = useAuthData();
+	const { userDetails } = useGetUser();
 	const handleLogout = () => {
 		logOut().then(() => {
 			console.log('user logged out');
 		});
 	};
+
 	const navLinks = (
 		<>
 			<li>
@@ -49,7 +53,9 @@ const Header = () => {
 					<div className="dropdown dropdown-end">
 						<label tabIndex={2} className="btn btn-ghost btn-circle avatar">
 							<div className="w-10 rounded-full">
-								<img src={user?.photoURL || userProfile} />
+								<img
+									src={user?.photoURL || userDetails?.userImage || userProfile}
+								/>
 							</div>
 						</label>
 						<ul
@@ -61,7 +67,7 @@ const Header = () => {
 									to={`/profile/${user?.uid}`}
 									className="justify-between cursor-pointer"
 								>
-									{user?.displayName ? user?.displayName : 'Profile'}
+									{user?.displayName ? user.displayName : 'Profile'}
 								</Link>
 							</li>
 							<li>

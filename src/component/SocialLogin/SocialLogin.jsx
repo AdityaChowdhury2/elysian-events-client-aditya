@@ -3,6 +3,7 @@ import useAuthData from '../../hooks/useAuthData';
 
 import { useLocation, useNavigate } from 'react-router-dom';
 import toast from 'react-hot-toast';
+import axios from 'axios';
 
 const SocialLogin = () => {
 	const { googleSignIn } = useAuthData();
@@ -14,6 +15,11 @@ const SocialLogin = () => {
 				console.log(res.user);
 				navigate(location.state || '/');
 				toast.success('Login Successful');
+				axios.patch(`/user/${res.user.email}`, {
+					email: res.user.email,
+					displayName: res.user.displayName,
+					photoURL: res.user.photoURL,
+				});
 			})
 			.catch(err => {
 				console.log(err.message);

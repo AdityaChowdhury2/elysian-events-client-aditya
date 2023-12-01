@@ -5,6 +5,7 @@ import SocialLogin from '../../component/SocialLogin/SocialLogin';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import useAuthData from '../../hooks/useAuthData';
 import toast from 'react-hot-toast';
+import axios from 'axios';
 
 const Login = () => {
 	const { signIn } = useAuthData();
@@ -12,7 +13,7 @@ const Login = () => {
 	const navigate = useNavigate();
 	console.log(location);
 
-	const handleLogin = e => {
+	const handleLogin = async e => {
 		e.preventDefault();
 		const formData = new FormData(e.currentTarget);
 		const userData = {};
@@ -20,6 +21,9 @@ const Login = () => {
 			userData[data[0]] = data[1];
 		}
 		console.log(userData);
+		await axios.patch(`/user/${userData.email}`, {
+			email: userData.email,
+		});
 		signIn(userData)
 			.then(res => {
 				navigate(location.state || '/');

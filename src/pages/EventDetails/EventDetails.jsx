@@ -1,26 +1,31 @@
-import { useEffect, useState } from 'react';
-import { useLoaderData, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
+// import useAuthData from '../../hooks/useAuthData';
+import useSingleEventById from '../../hooks/useSingleEventById';
+import SmallContainer from '../../component/SmallContainer/SmallContainer';
 
 const EventDetails = () => {
-	const [singleEvent, setSingleEvent] = useState(null);
-	const [loading, setLoading] = useState(true);
 	const { eventId } = useParams();
-	const eventData = useLoaderData();
+	// const { user } = useAuthData();
+	// console.log(eventId);
+	const {
+		event: singleEvent,
+		isError,
+		isLoading,
+		// refetch,
+	} = useSingleEventById(eventId);
 
-	useEffect(() => {
-		const event = eventData?.find(event => event.id === parseInt(eventId));
-		setSingleEvent(event);
-		setLoading(false);
-	}, [eventData, eventId]);
-	console.log(singleEvent);
 	const { image, name, long_description, price, features } = singleEvent || {};
 
 	return (
 		<>
-			{loading ? (
+			{isLoading ? (
 				<div className="flex items-center justify-center h-[30vh]">
 					<span className="loading loading-spinner loading-lg text-orange-500"></span>
 				</div>
+			) : isError ? (
+				<SmallContainer>
+					<p className="text-red-500 font-bold text-2xl">No data found</p>
+				</SmallContainer>
 			) : (
 				<>
 					<h2 className="font-bold text-center text-4xl mt-12 mb-3">{name}</h2>

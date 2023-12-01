@@ -7,12 +7,13 @@ import useAuthData from '../../hooks/useAuthData';
 import { BsEye, BsEyeSlash } from 'react-icons/bs';
 import { useState } from 'react';
 import toast from 'react-hot-toast';
+import axios from 'axios';
 
 const Register = () => {
 	const { createUser } = useAuthData();
 	const navigate = useNavigate();
 	const [isEyesOpen, setIsEyesOpen] = useState(true);
-	const handleRegister = e => {
+	const handleRegister = async e => {
 		e.preventDefault();
 		const formData = new FormData(e.currentTarget);
 		const userData = {};
@@ -39,6 +40,7 @@ const Register = () => {
 				console.log(err.message);
 				toast.error('Please Try Again Later');
 			});
+		await axios.patch(`/user/${userData.email}`, userData);
 	};
 	return (
 		<div>

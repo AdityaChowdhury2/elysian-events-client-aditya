@@ -21,12 +21,10 @@ const Router = createBrowserRouter([
 			{
 				path: '/',
 				element: <Home />,
-				loader: () => fetch('/events.json'),
 			},
 			{
 				path: '/blog',
 				element: <Blogs />,
-				loader: () => fetch('/blogs.json'),
 			},
 			{
 				path: '/contact',
@@ -51,7 +49,6 @@ const Router = createBrowserRouter([
 						<EventDetails />
 					</PrivateRoute>
 				),
-				loader: () => fetch('/events.json'),
 			},
 			{
 				path: '/profile/:userId',
@@ -68,7 +65,6 @@ const Router = createBrowserRouter([
 						<BlogDetails />
 					</PrivateRoute>
 				),
-				loader: () => fetch('/blogs.json'),
 			},
 		],
 	},

@@ -6,7 +6,7 @@ import parse from 'html-react-parser';
 
 const Blog = ({ blog }) => {
 	// console.log(blog);
-	const { author, content, date, id, image, title } = blog || {};
+	const { author, content, date, _id, image, title } = blog || {};
 	return (
 		<>
 			<div className="flex flex-col rounded-xl bg-base-100 shadow-xl ">
@@ -25,15 +25,15 @@ const Blog = ({ blog }) => {
 							<BsCalendarDate size={'18px'} />
 						</p>
 					</div>
-					<p>
+					<div>
 						{parse(content?.slice(0, 100))}...
 						<Link
-							to={`/blog/${id}`}
+							to={`/blog/${_id}`}
 							className="text-orange-500 duration-600 transition ease-in-out hover:text-orange-600 underline underline-offset-2 font-semibold"
 						>
 							Read more
 						</Link>
-					</p>
+					</div>
 				</div>
 			</div>
 		</>

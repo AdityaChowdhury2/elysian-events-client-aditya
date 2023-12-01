@@ -4,7 +4,6 @@ import { Link, useLocation, useParams } from 'react-router-dom';
 const PageHeader = ({ title, page }) => {
 	const location = useLocation();
 	const { blogId } = useParams();
-	console.log(blogId);
 	return (
 		<>
 			<div className="bg-header bg-cover bg-no-repeat bg-center bg-gray-700 bg-blend-overlay py-20">

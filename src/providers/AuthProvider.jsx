@@ -10,6 +10,8 @@ import {
 	updateProfile,
 } from 'firebase/auth';
 import auth from '../firebase/firebase.config';
+import { clearCookies } from '../api/clearCookies';
+import axios from 'axios';
 
 export const AuthContext = createContext(null);
 
@@ -31,6 +33,7 @@ const AuthProvider = ({ children }) => {
 	};
 	const logOut = () => {
 		setLoading(true);
+
 		return signOut(auth);
 	};
 	const updateNameAndDisplayPicture = ({ displayName }) => {
@@ -38,8 +41,16 @@ const AuthProvider = ({ children }) => {
 	};
 	useEffect(() => {
 		const unSubscribe = onAuthStateChanged(auth, user => {
-			setLoading(false);
-			setUser(user);
+			const loggedUser = user?.email;
+			if (user) {
+				setLoading(false);
+				setUser(user);
+				axios.post('/jwt', { email: loggedUser });
+			} else {
+				clearCookies();
+				setLoading(false);
+				setUser(user);
+			}
 		});
 		return () => unSubscribe();
 	}, []);
@@ -49,6 +60,7 @@ const AuthProvider = ({ children }) => {
 		signIn,
 		user,
 		logOut,
+		setUser,
 		loading,
 		updateNameAndDisplayPicture,
 	};

@@ -1,30 +1,36 @@
-import { useEffect, useState } from 'react';
 import PageHeader from '../../component/PageHeader/PageHeader';
-import { useLoaderData, useParams } from 'react-router-dom';
+import { useQuery } from '@tanstack/react-query';
+import { useParams } from 'react-router-dom';
 import { FcShare } from 'react-icons/fc';
 import parse from 'html-react-parser';
+import axios from 'axios';
+import SmallContainer from '../../component/SmallContainer/SmallContainer';
 
 const BlogDetails = () => {
-	const [singleBlog, setSingleBlog] = useState(null);
-	const blogs = useLoaderData();
-	const [loading, setLoading] = useState(true);
 	const { blogId } = useParams();
-
-	useEffect(() => {
-		const blog = blogs.find(blog => blog.id === Number(blogId));
-		setSingleBlog(blog);
-		setLoading(false);
-	}, [blogId, blogs]);
-	console.log(singleBlog);
-	console.log(loading);
-
+	const {
+		data: blog,
+		isLoading,
+		isError,
+	} = useQuery({
+		queryKey: ['blog', blogId],
+		queryFn: async () => {
+			const response = await axios.get(`/blog/${blogId}`);
+			return response.data;
+		},
+	});
+	const { title, image, author, date, content } = blog || {};
 	return (
 		<div>
 			<PageHeader title="Read The Full Blog" page={'BlogDetails'} />
-			{loading ? (
-				<div className="flex items-center justify-center h-[30vh]">
+			{isLoading ? (
+				<SmallContainer>
 					<span className="loading loading-spinner loading-lg text-orange-500"></span>
-				</div>
+				</SmallContainer>
+			) : isError ? (
+				<SmallContainer>
+					<p className="text-red-500 font-bold text-2xl">No data found</p>
+				</SmallContainer>
 			) : (
 				<div className="container p-4 my-12 flex flex-col md:flex-row gap-20 ">
 					<div className="md:w-2/3 space-y-8">
@@ -32,9 +38,9 @@ const BlogDetails = () => {
 							className=" font-bold text-2xl md:text-5xl
                         leading-normal"
 						>
-							{singleBlog.title}
+							{title}
 						</h2>
-						<img src={singleBlog.image} alt="" className="rounded-lg" />
+						<img src={image} alt="" className="rounded-lg" />
 						<div className="flex justify-between items-center">
 							<div className="flex gap-4">
 								<div className="avatar">
@@ -43,8 +49,8 @@ const BlogDetails = () => {
 									</div>
 								</div>
 								<div>
-									<p>{singleBlog.author}</p>
-									<p>{singleBlog.date}</p>
+									<p>{author}</p>
+									<p>{date}</p>
 								</div>
 							</div>
 							<div className="cursor-pointer">
@@ -52,7 +58,7 @@ const BlogDetails = () => {
 							</div>
 						</div>
 						<div className="text-justify whitespace-pre-wrap">
-							{parse(singleBlog.content)}
+							{parse(content)}
 						</div>
 					</div>
 					<div></div>

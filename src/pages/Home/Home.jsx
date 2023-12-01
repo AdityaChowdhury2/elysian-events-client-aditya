@@ -1,14 +1,15 @@
 import { Helmet } from 'react-helmet-async';
 import Slider from '../../component/Slider/Slider';
-import { useLoaderData } from 'react-router-dom';
 import ServiceCard from '../../component/ServiceCard/ServiceCard';
 import useAuthData from '../../hooks/useAuthData';
 import CountUp from 'react-countup';
 import './Home.css';
+import SmallContainer from '../../component/SmallContainer/SmallContainer';
 import SectionHeading from '../../component/SectionHeading/SectionHeading';
+import useEvents from '../../hooks/useEvents';
 
 const Home = () => {
-	const events = useLoaderData();
+	const { isLoading, events, isError } = useEvents();
 	const { user } = useAuthData();
 	console.log(user);
 
@@ -24,11 +25,21 @@ const Home = () => {
 				<SectionHeading title="Services" />
 				<div className="bg-service py-20 bg-center bg-no-repeat bg-cover">
 					<div className="container ">
-						<div className="grid grid-cols-1 lg:grid-cols-3 gap-10 p-3">
-							{events.map(event => (
-								<ServiceCard key={event.id} event={event} />
-							))}
-						</div>
+						{isLoading ? (
+							<SmallContainer>
+								<span className="loading loading-spinner loading-lg text-orange-50"></span>
+							</SmallContainer>
+						) : isError ? (
+							<SmallContainer>
+								<p className="text-red-50 font-bold text-2xl">No data found</p>
+							</SmallContainer>
+						) : (
+							<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 p-3">
+								{events.map(event => (
+									<ServiceCard key={event._id} event={event} />
+								))}
+							</div>
+						)}
 					</div>
 				</div>
 			</section>
