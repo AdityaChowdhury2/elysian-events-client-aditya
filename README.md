@@ -20,6 +20,7 @@ This is created for a social events management company. In home page there users
 - private apis are secured in Backend with jwt token verification
 - user can update his profile in profile section
 - image data will be stored as base64 encoded in mongodb if user update his image in profile page
+- tanstack query is used
 
 ## 🔗 Links
 
