@@ -1,26 +1,29 @@
-# Elysians Events - An event management company website
+# Elysians Events - An Event Management Company Website
 
-This is created for a social events management company. In home page there users will see the services offers by the company. For see the details of a service user need to complete registration process. Then user can see the service Features and other details. A logged in user can also read a blog and update his name from profile section.
+Welcome to Elysians Events, your go-to platform for seamless event management! This website is tailored for a social events management company, offering a range of services for your special occasions.
 
 ## Features
 
-- Responsive design
-- User's login and registration is handled by firebase
-- Services offered by the company are shown in home page.
-- In Blog route blogs are shown
-- To read a full Blog user needs to login.
-- User can update his name in profile section
-- In Login and registration toast will be shown when some error occurs and for successful login success message will be shown
-- AOS is used for handle some animations
+- 📱 **Responsive Design:** Enjoy a visually stunning and user-friendly experience on any device.
+- 🔐 **Firebase Authentication:** Secure and hassle-free user login and registration.
+- 🌐 **Service Showcase:** Explore the company's services on the home page.
+- 📝 **Blogs Section:**
+  - 💬 Read insightful blogs on event management.
+  - 🔒 Login required for full blog access.
+- 👤 **Profile Section:**
+  - 🔄 Update your name for a personalized touch.
+  - 🖼️ Update your profile image, stored as base64 encoded data in MongoDB.
+- 🍞 **Error Handling:** User-friendly toasts for login and registration errors; success messages on successful login.
+- 🚀 **Animation Handling:** Smooth animations implemented with AOS (Animate on Scroll).
 
-### UPDATES
+## Updates
 
-- Backend added using mongodb and express js
-- jwt added when user is logged in
-- private apis are secured in Backend with jwt token verification
-- user can update his profile in profile section
-- image data will be stored as base64 encoded in mongodb if user update his image in profile page
-- tanstack query is used
+- 🗃️ **Backend:** Backend added using MongoDB and Express.js.
+- 🔐 **JWT Authentication:** Added JWT for secure user authentication.
+- 🛡️ **Private APIs:** Secured backend private APIs with JWT token verification.
+- 👤 **Profile Updates:** Users can update their profiles in the profile section.
+- 🖼️ **Image Storage:** Image data stored as base64 encoded in MongoDB when users update their profile images.
+- 📡 **Tanstack Query:** Efficient data handling with Tanstack Query.
 
 ## 🔗 Links
 
