@@ -92,7 +92,6 @@ const Profile = () => {
 								/>
 							</div>
 						</div>
-						{/* <FileBase64 onDone={getFiles} /> */}
 
 						<input
 							name="userProfileImage"

@@ -1,4 +1,4 @@
-import BrandLogo from '/logo.png';
+import BrandLogo from '/newLogo.png';
 const Logo = () => {
 	return (
 		<>
